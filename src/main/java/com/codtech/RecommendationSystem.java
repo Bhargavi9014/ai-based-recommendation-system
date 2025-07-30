@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class ExcelRecommender {
+public class RecommendationSystem {
 
     private static final Map<Long, String> itemNames = Map.of(
         101L, "Wireless Mouse",
@@ -33,7 +33,7 @@ public class ExcelRecommender {
 
     public static void main(String[] args) throws Exception {
 
-        InputStream file = ExcelRecommender.class.getResourceAsStream("/sample_user_data.xlsx");
+        InputStream file = RecommendationSystem.class.getResourceAsStream("/sample_user_data.xlsx");
 
         if (file == null) {
             throw new FileNotFoundException("Excel file 'user_data.xlsx' not found.");
